@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Component</title>
+    <script src="bower_components/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+  </title>
+
+  <body>
+    <cmpt-title></cmpt-title>
+    <cmpt-subtitle></cmpt-subtitle>
+  </body>
+
+  <script>
+    window.addEventListener('WebComponentsReady', function () {
+      var myTitleScript = document.createElement('script');
+      myTitleScript.src = 'dist/cmpt-title.js';
+      document.head.appendChild(myTitleScript);
+
+      var mySubtitleScript = document.createElement('script');
+      mySubtitleScript.src = 'dist/cmpt-subtitle.js';
+      document.head.appendChild(mySubtitleScript);
+    });
+  </script>
+</html>
